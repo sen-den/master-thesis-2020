@@ -1,0 +1,32 @@
+\documentclass[a4paper,14pt]{extarticle}
+\usepackage{setup}
+
+\addbibresource{bibliography.bib} % Библиографический справочник
+
+\begin{document}
+
+
+\input{chapters/title-page}
+
+\tableofcontents
+\newpage
+
+\input{chapters/definitions}
+
+\input{chapters/INTRODUCTION}
+
+\input{chapters/all}
+
+\input{chapters/CONCLUSION}
+
+\input{bibliography}
+
+%\anonsection{ДОДАТКИ}
+\newpage
+\addcontentsline{toc}{section}{\uppercase{ДОДАТКИ}}
+\addcontentsline{toc}{subsection}{{Додаток А}}
+\includepdf[pages=-,pagecommand={},trim=0.78in 0.58in 0.38in 0.58in, clip,width=\textwidth]{chapters/D_A.pdf}
+
+
+
+\end{document}
